@@ -31,34 +31,37 @@ const steps = [
 
 const Installation = () => {
   return (
-    <section id="installation" className="section-padding bg-gradient-to-b from-sky-50 to-white">
+    <section id="installation" className="section-padding bg-gradient-to-b from-sky-50 to-white" aria-labelledby="installation-heading">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+          <h2 id="installation-heading" className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
             Our Installation Process
           </h2>
           <p className="text-lg text-gray-600">
-            We make going solar simple with our streamlined, hassle-free installation process.
+            We make going solar simple with our streamlined, hassle-free installation process throughout India.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <div className="space-y-12">
+            <ol className="space-y-12">
               {steps.map((step) => (
-                <div key={step.id} className="flex gap-6 animate-slide-right">
-                  <div className="flex-shrink-0 bg-solar-100 h-16 w-16 rounded-full flex items-center justify-center">
+                <li key={step.id} className="flex gap-6 animate-slide-right">
+                  <div className="flex-shrink-0 bg-solar-100 h-16 w-16 rounded-full flex items-center justify-center" aria-hidden="true">
                     {step.icon}
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
             <div className="mt-12">
-              <Button className="bg-solar-600 hover:bg-solar-700 text-white px-8 py-6 text-lg">
+              <Button 
+                className="bg-solar-600 hover:bg-solar-700 text-white px-8 py-6 text-lg"
+                aria-label="Schedule a free solar consultation"
+              >
                 Schedule Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -84,7 +87,7 @@ const Installation = () => {
 
 const GuaranteeItem = ({ text }: { text: string }) => (
   <li className="flex items-start gap-3">
-    <Check className="h-5 w-5 text-eco-600 mt-1 flex-shrink-0" />
+    <Check className="h-5 w-5 text-eco-600 mt-1 flex-shrink-0" aria-hidden="true" />
     <span>{text}</span>
   </li>
 );

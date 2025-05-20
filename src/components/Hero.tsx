@@ -4,21 +4,28 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="hero-background min-h-screen flex items-center">
+    <section id="hero" className="hero-background min-h-screen flex items-center" aria-labelledby="hero-heading">
       <div className="container mx-auto px-4 py-32">
         <div className="max-w-3xl animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Harness the Power of the Sun with Aditya Solar
           </h1>
           <p className="text-xl text-white/90 mb-8">
-            Premium rooftop solar solutions for homes and businesses. 
-            Save money, reduce your carbon footprint, and take control of your energy.
+            Premium rooftop solar solutions for homes and businesses across India. 
+            Save money, reduce your carbon footprint, and take control of your energy production.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-sun-500 hover:bg-sun-600 text-white text-lg px-8 py-6">
+            <Button 
+              className="bg-sun-500 hover:bg-sun-600 text-white text-lg px-8 py-6"
+              aria-label="Request a free solar quotation"
+            >
               Get Free Quote
             </Button>
-            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 text-lg px-8 py-6">
+            <Button 
+              variant="outline" 
+              className="bg-transparent border-white text-white hover:bg-white/10 text-lg px-8 py-6"
+              aria-label="Browse solar products"
+            >
               Explore Products
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

@@ -1,14 +1,22 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
 
 User-agent: *
 Allow: /
+
+# Allow Google bot full access
+User-agent: Googlebot
+Allow: /
+
+# Allow Bing bot full access
+User-agent: Bingbot
+Allow: /
+
+# Allow Twitter bot full access
+User-agent: Twitterbot
+Allow: /
+
+# Allow Facebook bot full access
+User-agent: facebookexternalhit
+Allow: /
+
+# Sitemap (add this when you have a sitemap)
+Sitemap: https://adityasolar.com/sitemap.xml
