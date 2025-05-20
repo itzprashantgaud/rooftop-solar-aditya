@@ -14,7 +14,7 @@ const Hero = () => {
             Premium rooftop solar solutions for homes and businesses. 
             Save money, reduce your carbon footprint, and take control of your energy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4">
             <Button className="bg-sun-500 hover:bg-sun-600 text-white text-lg px-8 py-6">
               Get Free Quote
             </Button>
@@ -22,7 +22,7 @@ const Hero = () => {
               Explore Products
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </div>
+          </div> */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
             <Stat value="1000+" label="Installations" />
             <Stat value="25+" label="Years Experience" />

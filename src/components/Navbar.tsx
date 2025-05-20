@@ -39,9 +39,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <NavLinks isScrolled={isScrolled} />
-          <Button className="bg-sun-500 hover:bg-sun-600 text-white">
+          {/* <Button className="bg-sun-500 hover:bg-sun-600 text-white">
             Get Free Quote
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -62,9 +62,9 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-lg absolute w-full">
           <div className="container py-4 flex flex-col space-y-4">
             <NavLinks isMobile={true} isScrolled={true} />
-            <Button className="bg-sun-500 hover:bg-sun-600 text-white w-full">
+            {/* <Button className="bg-sun-500 hover:bg-sun-600 text-white w-full">
               Get Free Quote
-            </Button>
+            </Button> */}
           </div>
         </div>
       )}
@@ -82,7 +82,7 @@ const NavLinks = ({ isMobile = false, isScrolled = false }) => {
     { name: "Products", href: "#products" },
     { name: "Benefits", href: "#benefits" },
     { name: "Installation", href: "#installation" },
-    { name: "Testimonials", href: "#testimonials" },
+    // { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
 
