@@ -9,7 +9,7 @@ const benefits = [
   },
   {
     title: "Government Incentives",
-    description: "Take advantage of tax credits and rebates for installing solar energy systems.",
+    description: "Take advantage of tax credits and rebates for installing solar energy systems in India.",
     icon: <ArrowDownRight className="w-12 h-12 text-sun-500" />,
   },
   {
@@ -36,14 +36,14 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section id="benefits" className="section-padding bg-solar-950 text-white">
+    <section id="benefits" className="section-padding bg-solar-950 text-white" aria-labelledby="benefits-heading">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 id="benefits-heading" className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Why Go Solar With <span className="text-sun-400">Aditya</span>?
           </h2>
           <p className="text-lg text-gray-300">
-            Switching to solar energy offers numerous benefits for homeowners and businesses alike.
+            Switching to solar energy offers numerous benefits for homeowners and businesses across India.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const Benefits = () => {
 const BenefitCard = ({ benefit }: { benefit: any }) => {
   return (
     <div className="bg-solar-900 p-6 rounded-lg hover:bg-solar-800 transition-colors flex flex-col items-start animate-fade-in">
-      <div className="mb-4">{benefit.icon}</div>
+      <div className="mb-4" aria-hidden="true">{benefit.icon}</div>
       <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
       <p className="text-gray-300">{benefit.description}</p>
     </div>

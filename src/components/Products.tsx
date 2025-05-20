@@ -32,12 +32,12 @@ const products = [
 
 const Products = () => {
   return (
-    <section id="products" className="section-padding bg-gradient-to-b from-white to-sky-50">
+    <section id="products" className="section-padding bg-gradient-to-b from-white to-sky-50" aria-labelledby="products-heading">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Solar Products</h2>
+          <h2 id="products-heading" className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Our Solar Products</h2>
           <p className="text-lg text-gray-600">
-            Cutting-edge solar technology designed for maximum efficiency, durability, and energy production.
+            Cutting-edge solar technology designed for maximum efficiency, durability, and energy production for Indian homes and businesses.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ const ProductCard = ({ product }: { product: any }) => {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow group">
       <div className="h-48 overflow-hidden relative bg-solar-100">
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
           {product.icon}
         </div>
       </div>
@@ -71,7 +71,7 @@ const ProductCard = ({ product }: { product: any }) => {
         <ul className="space-y-2">
           {product.features.map((feature: string, index: number) => (
             <li key={index} className="flex items-center text-sm">
-              <div className="w-2 h-2 rounded-full bg-sun-500 mr-2"></div>
+              <div className="w-2 h-2 rounded-full bg-sun-500 mr-2" aria-hidden="true"></div>
               {feature}
             </li>
           ))}
